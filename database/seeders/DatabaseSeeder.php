@@ -13,10 +13,10 @@ class DatabaseSeeder extends Seeder
     {
         // User::factory(10)->create();
         $tenant1 = \App\Models\Tenant::create(['id' => 'foo']);
-        $tenant1->domains()->create(['domain' => sprintf("foo.%s", env('APP_NAME'))]);
+        $tenant1->domains()->create(['domain' => sprintf("foo.%s.test", env('APP_NAME'))]);
 
         \App\Models\Tenant::all()->runForEach(function () {
-            \App\Models\User::factory()->create();
+            \App\Models\User::factory(10)->create();
         });
     }
 }
