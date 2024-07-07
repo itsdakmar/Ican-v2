@@ -60,10 +60,10 @@
                 </p>
             </div>
         </main>
-        <div class="mt-16 md:mt-0">
+        <section class="mt-16 md:mt-0">
             <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight">Everything you need to start a website</h2>
             <p class="text-lg mt-4 text-slate-600">Astro comes batteries included. It takes the best parts of state-of-the-art tools and adds its own innovations.</p>
-        </div>
+        </section>
         <section class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-16">
             <div class="flex gap-4 items-start">
                 <div class="mt-1 bg-black rounded-full p-2 w-8 h-8 flex items-center justify-center">
@@ -139,4 +139,11 @@
             </div>
         </section>
     </div>
+
+    <footer class="my-20"> <p class="text-center text-sm text-slate-500">
+            Copyright © {{ date('Y') }} CertiSwift. All rights reserved.
+        </p> <p class="text-center text-xs text-slate-500 mt-1">
+            Made by <a href="https://web3templates.com" target="_blank" rel="noopener" class="hover:underline">
+                Ammar Razaman
+            </a> </p> </footer>
 </div>

@@ -1,15 +1,22 @@
-@extends('layouts.app')
+<!DOCTYPE html>
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-@section('content')
+    <title>{{ config('app.name', 'Laravel') }}</title>
 
+    <!-- Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap">
+
+    <!-- Styles & Scripts -->
+    @livewireStyles
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
+</head>
+<body class="font-sans antialiased">
     <div class="max-w-screen-xl mx-auto px-5">
         <livewire:landing-menu/>
     </div>
-
-    <footer class="my-20"> <p class="text-center text-sm text-slate-500">
-            Copyright © {{ date('Y') }} CertiSwift. All rights reserved.
-        </p> <p class="text-center text-xs text-slate-500 mt-1">
-            Made by <a href="https://web3templates.com" target="_blank" rel="noopener" class="hover:underline">
-                Ammar Razaman
-            </a> </p> </footer>
-@endsection
+    @livewireScripts
+</body>
+</html>
